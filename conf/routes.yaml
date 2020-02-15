@@ -1,0 +1,6 @@
+routes:
+  standard:
+    index:
+      route: /
+      method: get
+      action: App\Action\Standard\WelcomeAction
