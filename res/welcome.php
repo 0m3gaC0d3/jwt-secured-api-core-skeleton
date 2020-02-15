@@ -1,5 +1,5 @@
 <?php
-$configuration = $this->controllerAnnotationService->getConfiguration();
+$configuration = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,14 +26,7 @@ $configuration = $this->controllerAnnotationService->getConfiguration();
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        foreach ($configuration as $conf) {
-                            echo '<tr>';
-                            echo '<td>' . strtoupper($conf['method']) . '</td>';
-                            echo '<td>' . rtrim($_ENV['JWT_ISSUER'], '/') . $conf['route'] . '</td>';
-                            echo '</tr>';
-                        }
-                        ?>
+                         TODO: add endpoints overview
                         </tbody>
                     </table>
                 </div>
