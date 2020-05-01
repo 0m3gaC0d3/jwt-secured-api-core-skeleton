@@ -36,34 +36,15 @@ CLIENT_IDS="sample-uid-1,sample-uid-2"
 ````
 The client need this id to authenticate itself to your api.
 
-## How to add a new endpoint
-* Create a new controller class like this.
-```php
-<?php
+## But I dont want to use Graphql
+Simple do the following:
+* remove the GraphQL part of `conf/services.yaml`.
+* remove `omegacode/jwt-secured-api-graphql` dependency of `composer.json`.
+* remove the directory `src/GraphQL`.
 
-declare(strict_types=1);
+## Clear the cache
+The framework comes bundled with a console. To clear the cache run the following
+`bin/console cache:clear`
 
-namespace App\Controller;
-
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use OmegaCode\JwtSecuredApiCore\Annotation\ControllerAnnotation;
-
-class MyController
-{
-    /**
-     * @ControllerAnnotation(route="/", method="get", protected=true)
-     */
-    public function someAction(Request $request, Response $response, array $args): Response
-    {
-        $response->getBody()->write("Hello world");
-
-        return $response;
-    }
-}
-```
-* Register your new controller class using the FQCN in `conf/controllers.yaml`.
-````yaml
-controllers:
-  - App\Controller\MyController
-````
+If you are running the project using the contained docker-compose file, 
+simply run th shell script `bin/docker-clear-cache.sh`
