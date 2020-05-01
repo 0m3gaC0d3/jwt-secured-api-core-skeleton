@@ -5,7 +5,7 @@ composer.phar
 keys/*
 !keys/.gitkeep
 bin/*
-!bin/.gitkeep
+!bin/docker-*
 .phpunit.result.cache
 .database/
 .idea/
