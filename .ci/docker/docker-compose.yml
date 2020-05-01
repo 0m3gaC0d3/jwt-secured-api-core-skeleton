@@ -45,7 +45,7 @@ services:
                 echo \"Running phpcs...\";
                 bin/phpcs --error-severity=1 --warning-severity=8 --extensions=php src;
                 echo \"Running php-cs-fixer...\";
-                bin/php-cs-fixer fix --dry-run --diff
+                bin/php-cs-fixer fix --dry-run --diff --allow-risky=yes
                 echo \"Running phpmd...\";
                 bin/phpmd src text phpmd.xml;
                 echo \"Running phpstan...\";

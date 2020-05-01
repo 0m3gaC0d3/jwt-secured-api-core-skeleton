@@ -1,10 +1,12 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+declare(strict_types=1);
 
-(new \Symfony\Component\Dotenv\Dotenv())->loadEnv(__DIR__ . '/../.env');
+use OmegaCode\JwtSecuredApiCore\Core\Kernel\HttpKernel;
 
-define('APP_ROOT_PATH', dirname(__DIR__, 1).'/');
-
-$kernel = new \OmegaCode\JwtSecuredApiCore\Kernel();
-$kernel->run();
+(function () {
+    require __DIR__ . '/../vendor/autoload.php';
+    (new \Symfony\Component\Dotenv\Dotenv())->loadEnv(__DIR__ . '/../.env');
+    define('APP_ROOT_PATH', dirname(__DIR__, 1) . '/');
+    (new HttpKernel())->run();
+})();
