@@ -22,6 +22,6 @@ class GraphQLResolverSubscriber implements EventSubscriberInterface
         $registry = $event->getResolverRegistry();
         $registry->clear();
         $queryResolver = new QueryResolver();
-        $registry->addResolver($queryResolver);
+        $registry->add($queryResolver, $queryResolver->getType());
     }
 }
