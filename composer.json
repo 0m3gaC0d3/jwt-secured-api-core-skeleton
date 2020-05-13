@@ -6,9 +6,10 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "omegacode/jwt-secured-api-core": "0.7.*",
-        "omegacode/jwt-secured-api-graphql": "0.3.*",
-        "ext-json": "*"
+        "omegacode/jwt-secured-api-core": "dev-master",
+        "omegacode/jwt-secured-api-graphql": "dev-master",
+        "ext-json": "*",
+        "ext-openssl": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",
