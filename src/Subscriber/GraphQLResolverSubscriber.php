@@ -17,7 +17,7 @@ class GraphQLResolverSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function onCollected(ResolverCollectedEvent $event)
+    public function onCollected(ResolverCollectedEvent $event): void
     {
         $registry = $event->getResolverRegistry();
         $registry->clear();

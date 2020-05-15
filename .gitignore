@@ -1,7 +1,5 @@
 .env
 vendor/
-composer.lock
-composer.phar
 keys/*
 !keys/.gitkeep
 bin/*
@@ -12,6 +10,6 @@ bin/*
 .php_cs.cache
 local-packages/*
 var/cache/*
-!var/cache/.gitkeep
+!var/cache/system/.gitkeep
 var/log/*
 !var/log/.gitkeep
