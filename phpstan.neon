@@ -1,5 +1,3 @@
 parameters:
     checkMissingIterableValueType: false
     checkGenericClassInNonGenericObjectType: false
-    ignoreErrors:
-        - '#Constant APP_ROOT_PATH not found#'
