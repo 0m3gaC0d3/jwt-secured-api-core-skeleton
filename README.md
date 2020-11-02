@@ -33,16 +33,3 @@ Simple add your client ids to your `.env`:
 CLIENT_IDS="sample-uid-1,sample-uid-2"
 ````
 The client need this id to authenticate itself to your api.
-
-## But I dont want to use Graphql
-Simple do the following:
-* remove the GraphQL part of `conf/services.yaml`.
-* remove `omegacode/jwt-secured-api-graphql` dependency of `composer.json`.
-* remove the directory `src/GraphQL`.
-
-## Clear the cache
-The framework comes bundled with a console. To clear the cache run the following
-`bin/console cache:clear`
-
-If you are running the project using the contained docker-compose file, 
-simply run th shell script `bin/docker-clear-cache.sh`

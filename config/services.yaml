@@ -5,9 +5,4 @@ services:
     public: true
   App\:
     resource: '../src/*'
-    exclude: '../src/{GraphQL/Resolver,Kernel.php}'
-
-  # Remove the following if you dont want to use GraphQL
-  App\Subscriber\GraphQLResolverSubscriber:
-    tags:
-      - 'kernel.event_subscriber'
+    exclude: '../src/{Kernel.php}'

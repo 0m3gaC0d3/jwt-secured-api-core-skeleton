@@ -20,7 +20,7 @@ return PhpCsFixer\Config::create()
         'blank_line_after_opening_tag' => false,
         'concat_space' => ['spacing' => 'one'],
         'array_syntax' => ['syntax' => 'short'],
-        'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
+        'yoda_style' => true,
         'declare_strict_types' => true,
         'psr4' => true,
         'no_php4_constructor' => true,
