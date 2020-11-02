@@ -35,15 +35,16 @@ services:
     #======================================================
     # PHP fix
     #======================================================
-    php-fix:
+    fix:
         image: php:${PHP_VERSION}-alpine
         volumes:
             - ${ROOT_DIR}:${ROOT_DIR}
         working_dir: ${ROOT_DIR}
         command: >
             /bin/sh -c "
-                echo \"Fix php-cs-fixer errors\";
+                echo \"Fix code  errors\";
                 vendor/bin/php-cs-fixer fix --allow-risky=yes
+                vendor/bin/phpcbf
             "
     #======================================================
     # Quality

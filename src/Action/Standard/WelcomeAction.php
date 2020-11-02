@@ -12,10 +12,7 @@ class WelcomeAction extends AbstractAction
 {
     public function __invoke(Request $request, Response $response): Response
     {
-        ob_start();
-        include __DIR__ . '/../../../res/welcome.php';
-        $content = ob_get_contents();
-        ob_end_clean();
+        $content = file_get_contents(APP_ROOT_PATH . 'res/welcome.html');
         $response->getBody()->write((string) $content);
 
         return $response;
